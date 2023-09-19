@@ -17,7 +17,7 @@ int flags, int width, int precision, int size)
 int m = BUFF_SIZE - 2;
 unsigned long int num = va_arg(types, unsigned long int);
 
-num = convert_size_unsigned(num, size);
+num = convert_size_unsgnd(num, size);
 
 if (num == 0)
 buffer[m--] = '0';
@@ -56,7 +56,7 @@ unsigned long int init_num = num;
 
 UNUSED(width);
 
-num = convert_size_unsigned(num, size);
+num = convert_size_unsgnd(num, size);
 
 if (num == 0)
 buffer[m--] = '0';
@@ -135,7 +135,7 @@ unsigned long int num = va_arg(types, unsigned long int);
 unsigned long int init_num = num;
 UNUSED(width);
 
-num = convert_size_unsigned(num, size);
+num = convert_size_unsgnd(num, size);
 
 if (num == 0)
 buffer[m--] = '0';
