@@ -57,7 +57,7 @@ length = precision;
 if (width > length)
 {
 if (flags & F_MINUS)
-                {
+{
 write(1, &str[0], length);
 for (m = width - length; m > 0; m--)
 write(1, " ", 1);
@@ -181,7 +181,7 @@ char z = '0' + a[i];
 
 write(1, &z, 1);
 count++;
-                }
+}
 }
 return (count);
 }

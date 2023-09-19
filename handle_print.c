@@ -41,7 +41,7 @@ while (f[*x] != ' ' && f[*x] != '%')
 if (f[*x] == ' ')
 --(*x);
 return (1);
-                }
+}
 unknow_len += write(1, &f[*x], 1);
 return (unknow_len);
 }
