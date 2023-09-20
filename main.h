@@ -19,25 +19,25 @@
 #define S_SHORT 1
 
 /**
- * struct fmt - Struct op
+ * struct f - Struct operation
  *
- * @fmt: The format.
+ * @f: The format.
  * @fn: The function associated.
  */
-struct fmt
+struct f
 {
-	char fmt;
+	char f;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
- * typedef struct fmt fmt_t - Struct op
+ * typedef struct f f1 - Struct operation
  *
- * @fmt: The format.
- * @fm_t: The function associated.
+ * @f: The format.
+ * @f1: The function associated.
  */
-typedef struct fmt fmt_t;
+typedef struct f f1;
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
@@ -74,11 +74,11 @@ char buffer[], int flags, char flag_ch, int width, int precision, int size);
 int print_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
-/* Funcion to print memory address */
+/* Function to print memory address */
 int print_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
-/* Funciotns to handle other specifiers */
+/* Functions to handle other specifiers */
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
@@ -106,7 +106,7 @@ int write_unsgnd(int is_negative, int ind,
 char buffer[],
 	int flags, int width, int precision, int size);
 
-/****************** UTILS ******************/
+/****************** DIGITSS ******************/
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
